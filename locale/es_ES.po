@@ -1,0 +1,19 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:sale.configuration,relation_types:"
+msgid "Contact types"
+msgstr "Tipos de contacto"
+
+msgctxt "field:sale.sale,allowed_contacts:"
+msgid "Allowed Contact"
+msgstr "Contactos permitidos"
+
+msgctxt "field:sale.sale,contact:"
+msgid "Contact"
+msgstr "Contacto"
+
+msgctxt "help:sale.sale,allowed_contacts:"
+msgid "Allowed relation types for the related contact."
+msgstr "Tipos de relación permitidos para el contacto relacionado"
