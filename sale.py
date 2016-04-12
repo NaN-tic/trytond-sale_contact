@@ -5,7 +5,6 @@ from trytond.pool import PoolMeta
 from trytond.modules.account_invoice_contact.invoice import ContactMixin
 
 __all__ = ['ConfigurationRelationType', 'Configuration', 'Sale']
-__metaclass__ = PoolMeta
 
 
 class ConfigurationRelationType(ModelSQL):
@@ -20,6 +19,7 @@ class ConfigurationRelationType(ModelSQL):
 
 class Configuration:
     __name__ = 'sale.configuration'
+    __metaclass__ = PoolMeta
 
     relation_types = fields.Many2Many(
         'sale.configuration-party.relation.type', 'config',
@@ -29,6 +29,7 @@ class Configuration:
 class Sale(ContactMixin):
     __name__ = 'sale.sale'
     _contact_config_name = 'sale.configuration'
+    __metaclass__ = PoolMeta
 
     def _get_invoice_sale(self, invoice_type):
         invoice = super(Sale, self)._get_invoice_sale(invoice_type)
