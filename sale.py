@@ -31,8 +31,8 @@ class Sale(ContactMixin):
     _contact_config_name = 'sale.configuration'
     __metaclass__ = PoolMeta
 
-    def _get_invoice_sale(self, invoice_type):
-        invoice = super(Sale, self)._get_invoice_sale(invoice_type)
+    def _get_invoice_sale(self):
+        invoice = super(Sale, self)._get_invoice_sale()
         if self.contact:
             invoice.contact = self.contact
         return invoice
