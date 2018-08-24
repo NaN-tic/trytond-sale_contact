@@ -17,19 +17,17 @@ class ConfigurationRelationType(ModelSQL):
         required=True, select=True)
 
 
-class Configuration:
+class Configuration(metaclass=PoolMeta):
     __name__ = 'sale.configuration'
-    __metaclass__ = PoolMeta
 
     relation_types = fields.Many2Many(
         'sale.configuration-party.relation.type', 'config',
         'relation', 'Contact types')
 
 
-class Sale(ContactMixin):
+class Sale(ContactMixin, metaclass=PoolMeta):
     __name__ = 'sale.sale'
     _contact_config_name = 'sale.configuration'
-    __metaclass__ = PoolMeta
 
     def _get_invoice_sale(self):
         invoice = super(Sale, self)._get_invoice_sale()
