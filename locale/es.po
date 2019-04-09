@@ -1,10 +1,42 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:sale.configuration,relation_types:"
 msgid "Contact types"
 msgstr "Tipos de contacto"
+
+msgctxt "field:sale.configuration-party.relation.type,config:"
+msgid "Config"
+msgstr "Config"
+
+msgctxt "field:sale.configuration-party.relation.type,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:sale.configuration-party.relation.type,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:sale.configuration-party.relation.type,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:sale.configuration-party.relation.type,rec_name:"
+msgid "Record Name"
+msgstr "Nombre registro"
+
+msgctxt "field:sale.configuration-party.relation.type,relation:"
+msgid "Relation Type"
+msgstr "Tipo de relación"
+
+msgctxt "field:sale.configuration-party.relation.type,write_date:"
+msgid "Write Date"
+msgstr "Fecha de modificación"
+
+msgctxt "field:sale.configuration-party.relation.type,write_uid:"
+msgid "Write User"
+msgstr "Usuario de modificación"
 
 msgctxt "field:sale.sale,allowed_contacts:"
 msgid "Allowed Contact"
@@ -17,3 +49,7 @@ msgstr "Contacto"
 msgctxt "help:sale.sale,allowed_contacts:"
 msgid "Allowed relation types for the related contact."
 msgstr "Tipos de relación permitidos para el contacto relacionado"
+
+msgctxt "model:sale.configuration-party.relation.type,name:"
+msgid "Sale Configuration - Party relation type"
+msgstr "Configuración venta - Tipo de relación tercero"
