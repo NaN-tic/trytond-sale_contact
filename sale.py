@@ -31,6 +31,7 @@ class Sale(ContactMixin, metaclass=PoolMeta):
 
     def _get_invoice_sale(self):
         invoice = super(Sale, self)._get_invoice_sale()
-        if self.contact:
-            invoice.contact = self.contact
+        if self.invoice_contact:
+            if self.invoice_contact in invoice.allowed_invoice_contacts:
+                invoice.invoice_contact = self.invoice_contact
         return invoice

@@ -42,9 +42,9 @@ msgctxt "field:sale.sale,allowed_contacts:"
 msgid "Allowed Contact"
 msgstr "Contactes permesos"
 
-msgctxt "field:sale.sale,contact:"
-msgid "Contact"
-msgstr "Contacte"
+msgctxt "field:sale.sale,invoice_contact:"
+msgid "Invoice Contact"
+msgstr "Contacte factura"
 
 msgctxt "help:sale.sale,allowed_contacts:"
 msgid "Allowed relation types for the related contact."
