@@ -2,6 +2,7 @@
 # the full copyright notices and license terms.
 from trytond.model import fields, ModelSQL
 from trytond.pool import PoolMeta
+from trytond.pyson import Eval
 from trytond.modules.account_invoice_contact.invoice import ContactMixin
 
 __all__ = ['ConfigurationRelationType', 'Configuration', 'Sale']
@@ -28,6 +29,14 @@ class Configuration(metaclass=PoolMeta):
 class Sale(ContactMixin, metaclass=PoolMeta):
     __name__ = 'sale.sale'
     _contact_config_name = 'sale.configuration'
+
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls.allowed_invoice_contacts.context = {'company': Eval('company')}
+        cls.allowed_invoice_contacts.depends.append('company')
+        cls.invoice_contact.context = {'company': Eval('company')}
+        cls.invoice_contact.depends.append('company')
 
     def _get_invoice_sale(self):
         invoice = super(Sale, self)._get_invoice_sale()
