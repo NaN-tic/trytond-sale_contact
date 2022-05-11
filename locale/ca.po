@@ -16,7 +16,7 @@ msgstr "Tipus de relació"
 
 msgctxt "field:sale.sale,allowed_invoice_contacts:"
 msgid "Allowed Contact"
-msgstr "Contactes permessos"
+msgstr "Contactes permesos"
 
 msgctxt "field:sale.sale,invoice_contact:"
 msgid "Invoice Contact"
