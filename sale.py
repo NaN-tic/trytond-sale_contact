@@ -33,9 +33,9 @@ class Sale(ContactMixin, metaclass=PoolMeta):
     @classmethod
     def __setup__(cls):
         super().__setup__()
-        cls.allowed_invoice_contacts.context = {'company': Eval('company')}
+        cls.allowed_invoice_contacts.context = {'company': Eval('company', -1)}
         cls.allowed_invoice_contacts.depends.append('company')
-        cls.invoice_contact.context = {'company': Eval('company')}
+        cls.invoice_contact.context = {'company': Eval('company', -1)}
         cls.invoice_contact.depends.append('company')
 
     def _get_invoice_sale(self):
